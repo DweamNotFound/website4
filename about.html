@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Gazelle Aesthetics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body class="fade-in">
+    <header>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="index.html" onclick="navigate(event, 'index.html')">Home</a></li>
+                <li><a href="about.html" onclick="navigate(event, 'about.html')">About</a></li>
+                <li><a href="services.html" onclick="navigate(event, 'services.html')">Services</a></li>
+                <li><a href="contact.html" onclick="navigate(event, 'contact.html')">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="fullscreen-menu">
+        <ul>
+            <li><a href="index.html" onclick="navigate(event, 'index.html')">Home</a></li>
+            <li><a href="about.html" onclick="navigate(event, 'about.html')">About</a></li>
+            <li><a href="services.html" onclick="navigate(event, 'services.html')">Services</a></li>
+            <li><a href="contact.html" onclick="navigate(event, 'contact.html')">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <section class="about">
+            <h2>Our Story</h2>
+            <p>Gazelle Aesthetics was founded with a mission to provide exceptional aesthetic services...</p>
+
+            <h2>Meet the Team</h2>
+            <div class="team-member">
+                <img src="team1.jpg" alt="Team Member 1">
+                <p>Dr. Smith - Founder & Lead Aesthetician</p>
+            </div>
+            <div class="team-member">
+                <img src="team2.jpg" alt="Team Member 2">
+                <p>Jane Doe - Aesthetic Nurse</p>
+            </div>
+
+            <h2>Certifications and Licenses</h2>
+            <p>We are certified and licensed by the following organizations...</p>
+        </section>
+
+        <footer>
+            <div class="contact-info">
+                <p>Contact us:</p> <a href="tel:+1469-402-8983">469-402-8983</a>
+                <p>Email: info@gazelleaesthetics.com</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/gazelleaesthetics/" target="_blank">Instagram</a>
+            </div>
+            <div class="newsletter">
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Subscribe to our newsletter" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

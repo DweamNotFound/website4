@@ -1,0 +1,359 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: top 0.3s;
+}
+
+header.hidden {
+    top: -100px; /* Hide the header */
+}
+
+a {
+    color: white;
+}
+
+.desktop-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.desktop-menu li {
+    margin: 0 15px;
+}
+
+.desktop-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.desktop-menu li a:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+}
+
+.hamburger-menu .bar {
+    width: 5vw;
+    height: 0.5vh;
+    background-color: #fff;
+    margin: 1vh 0;
+    transition: 0.4s;
+}
+
+/* Fullscreen menu styles */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.fullscreen-menu.active {
+    display: flex;
+    opacity: 1;
+}
+
+.fullscreen-menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.fullscreen-menu ul li {
+    margin: 5vh 0;
+}
+
+.fullscreen-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 5vw;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.fullscreen-menu ul li a:hover {
+    color: #ddd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 70px; /* Adjust for fixed header */
+    font-family: 'Playfair Display', serif;
+}
+
+.hero img {
+    width: 70vh; /* Adjust the width and height to your needs */
+    height: 70vh;
+    max-width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-text1 {
+    position: absolute;
+    top: -8%; /* Adjust to make the text higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2vw; /* Adjusted for responsive scaling */
+    z-index: 2;
+    color: white;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0%; /* Adjust to make the text higher */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 4vw; /* Adjusted for responsive scaling */
+    z-index: 2;
+    color: white;
+}
+
+/* Other sections */
+.introduction, .featured-services, .testimonials, .about, .services, .booking-info, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.introduction h2, .featured-services h2, .testimonials h2, .about h2, .services h2, .booking-info h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.service, .service-category {
+    margin-bottom: 20px;
+}
+
+.service h3, .service-category h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .contact-info, footer .social-media, footer .newsletter {
+    margin-bottom: 20px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #ddd;
+}
+
+footer .newsletter form {
+    display: inline-block;
+}
+
+footer .newsletter input[type="email"] {
+    padding: 0px;
+    font-size: 14px;
+}
+
+footer .newsletter button {
+    padding: 10px;
+    font-size: 16px;
+    background: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .newsletter button:hover {
+    background: #ccc;
+}
+
+/* Contact form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #444;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    header nav ul li {
+        margin: 10px;
+        white-space: nowrap;
+    }
+
+    .hero img {
+        width: 50vh; /* Adjust the width and height to your needs */
+        height: 50vh;
+    }
+
+    .hero-text1 {
+        top: -8%;
+    }
+
+    .hero-text {
+        top: 0%;
+    }
+
+    .introduction h2, .featured-services h2, .testimonials h2, .about h2, .services h2, .booking-info h2, .contact h2 {
+        font-size: 28px;
+    }
+
+    .service h3, .service-category h3 {
+        font-size: 24px;
+    }
+
+    footer .newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer .newsletter button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 18px;
+    }
+
+    .hero img {
+        width: 40vh; /* Adjust the width and height to your needs */
+        height: 40vh;
+    }
+
+    .hero-text {
+        top: 0%;
+    }
+
+    .hero-text1 {
+        top: -8%;
+    }
+
+    .introduction h2, .featured-services h2, .testimonials h2, .about h2, .services h2, .booking-info h2, .contact h2 {
+        font-size: 24px;
+    }
+
+    .service h3, .service-category h3 {
+        font-size: 20px;
+    }
+}

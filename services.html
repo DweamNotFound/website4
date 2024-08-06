@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Gazelle Aesthetics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body class="fade-in">
+    <header>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="index.html" onclick="navigate(event, 'index.html')">Home</a></li>
+                <li><a href="about.html" onclick="navigate(event, 'about.html')">About</a></li>
+                <li><a href="services.html" onclick="navigate(event, 'services.html')">Services</a></li>
+                <li><a href="contact.html" onclick="navigate(event, 'contact.html')">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="fullscreen-menu">
+        <ul>
+            <li><a href="index.html" onclick="navigate(event, 'index.html')">Home</a></li>
+            <li><a href="about.html" onclick="navigate(event, 'about.html')">About</a></li>
+            <li><a href="services.html" onclick="navigate(event, 'services.html')">Services</a></li>
+            <li><a href="contact.html" onclick="navigate(event, 'contact.html')">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-category">
+                <h3>Weight Loss</h3>
+                <p>Effective weight loss solutions tailored to your needs.</p>
+            </div>
+            <div class="service-category">
+                <h3>B12</h3>
+                <p>Boost your energy with our B12 treatments.</p>
+            </div>
+            <div class="service-category">
+                <h3>Botox</h3>
+                <p>Rejuvenate your appearance with our Botox services.</p>
+            </div>
+            <div class="service-category">
+                <h3>Fillers</h3>
+                <p>Get a youthful look with our professional fillers.</p>
+            </div>
+        </section>
+
+        <section class="booking-info">
+            <h2>Booking Information</h2>
+            <p><!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/osaydbhutta/30min" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end --></p>
+            <p>To book any of our services, please contact us at <a href="tel:+1469-402-8983">469-402-8983</a> or email info@gazelleaesthetics.com.</p>
+        </section>
+
+        <footer>
+            <div class="contact-info">
+                <p>Contact us:</p> <a href="tel:+1469-402-8983">469-402-8983</a>
+                <p>Email: info@gazelleaesthetics.com</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/gazelleaesthetics/" target="_blank">Instagram</a>
+                <!--a href="#">Facebook</a>
+                <a href="#">Twitter</a>-->
+            </div>
+            <div class="newsletter">
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Subscribe to our newsletter" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
